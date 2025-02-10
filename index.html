@@ -1,30 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GK SOUND</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>GK Sound App</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #track-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    #track-list li {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div id="app">
-    <div id="title">GK SOUND</div>
-    <div id="controls">
-      <button id="prev">Prev</button>
-      <button id="play">Play</button>
-      <button id="next">Next</button>
-    </div>
-    <div id="filters">
-      <label>Genres:</label>
-      <input type="checkbox" name="genre" value="rock"> Rock
-      <input type="checkbox" name="genre" value="jazz"> Jazz
-      <input type="checkbox" name="genre" value="jazz"> Kpop
-      <!-- Добавь другие жанры по аналогии -->
-    </div>
-    <div id="footer">
-      <button id="favorite">Add to Favorite</button>
-    </div>
-  </div>
-  <script src="app.js"></script>
+  <h1>GK Sound</h1>
+
+  <!-- Кнопки управления музыкой -->
+  <button id="play">Play/Pause</button>
+  <button id="prev">Previous</button>
+  <button id="next">Next</button>
+
+  <h2>Available Tracks</h2>
+  <ul id="track-list">
+    <!-- Список треков будет динамически загружаться здесь -->
+  </ul>
+
+  <h2>Choose Genre</h2>
+  <label>
+    <input type="checkbox" name="genre" value="kpop"> K-POP
+  </label>
+
+  <script src="script.js"></script>
 </body>
 </html>
