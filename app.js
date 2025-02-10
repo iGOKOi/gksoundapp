@@ -4,7 +4,6 @@ const tracks = [
   { title: "Track 3", genre: "kpop", url: "https://drive.google.com/uc?export=download&id=1susDjUeEoBbRnkObRhd6Z6OiH2tp-wff" },
   { title: "Track 4", genre: "kpop", url: "https://drive.google.com/uc?export=download&id=1n9NIV84toNI4ebonDkmYVxu4cGRGARwg" },
   { title: "Track 5", genre: "kpop", url: "https://drive.google.com/uc?export=download&id=1ObuD1e6A0qY2zEIultjZGg9wzt4IEfR7" },
-  // Добавь сюда ссылки на свои треки
 ];
 
 let currentTrackIndex = 0;
@@ -65,6 +64,14 @@ function updateTrackList(filteredTracks) {
   });
 
   // Если фильтрация не дает результатов, показываем сообщение
+  if (filteredTracks.length === 0) {
+    trackListElement.innerHTML = 'Нет треков для выбранных жанров.';
+  }
+}
+
+// Инициализация списка треков
+updateTrackList(tracks);
+
   if (filteredTracks.length === 0) {
     trackListElement.innerHTML = 'Нет треков для выбранных жанров.';
   }
