@@ -1,51 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GK Sound App</title>
-  <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    button {
-      background-color: #333;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #track-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    #track-list li {
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GK SOUND</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>GK Sound</h1>
+    <div class="container">
+        <header>
+            <div class="logo">GK SOUND</div>
+            <div class="filters-btn">Фильтры</div>
+        </header>
 
-  <!-- Кнопки управления музыкой -->
-  <button id="play">Play/Pause</button>
-  <button id="prev">Previous</button>
-  <button id="next">Next</button>
+        <main>
+            <div class="controls">
+                <button class="prev-btn">←</button>
+                <button class="play-btn">▶</button>
+                <button class="next-btn">→</button>
+            </div>
+        </main>
 
-  <h2>Available Tracks</h2>
-  <ul id="track-list">
-    <!-- Список треков будет динамически загружаться здесь -->
-  </ul>
+        <footer>
+            <div class="tabs">
+                <button class="tab">Главная</button>
+                <button class="tab">Избранное</button>
+                <button class="tab">Прочее</button>
+            </div>
+        </footer>
 
-  <h2>Choose Genre</h2>
-  <label>
-    <input type="checkbox" name="genre" value="kpop"> K-POP
-  </label>
+        <div class="modal" id="filters-modal">
+            <div class="modal-content">
+                <h2>Выберите жанры</h2>
+                <label><input type="checkbox"> Фонк</label>
+                <label><input type="checkbox"> K-POP</label>
+                <label><input type="checkbox"> Hip-Hop</label>
+                <button class="close-btn">Закрыть</button>
+            </div>
+        </div>
+
+        <div class="modal" id="info-modal">
+            <div class="modal-content">
+                <h2>О приложении</h2>
+                <p>Тут будет информация о приложении.</p>
+                <button class="close-btn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
 
   <script src="script.js"></script>
 </body>
